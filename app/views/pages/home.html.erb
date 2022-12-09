@@ -1,4 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1434082033009-b81d41d32e1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1628592102751-ba83b0314276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1397&q=80
+);">
   <div class="container">
     <h1>KaBenB <strong>le logement</strong> entre <strong> nous</strong> !</h1>
     <p>Location de logements de particulier à particulier.</p>
@@ -6,7 +7,24 @@
   </div>
 </div>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container d-flex">
+  <div id="">
+    <%= link_to "Voir tous les appartements", flats_path, class: "btn btn-flat" %>
+  </div>
 
-<%= link_to "Voir tous les appartements", flats_path, class: "" %>
+  <div>
+    <%= image_tag("femme_lit.png", width: 500) %>
+
+    <p id="lorem">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+      essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+      passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+  </div>
+
+  <div>
+    <%= image_tag("femme_allongee.png", width: 500) %>
+  </div>
+</div>

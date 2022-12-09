@@ -6,10 +6,12 @@ class FlatsController < ApplicationController
 
   def show
     @flats = Flat.all
-    @markers = @flats.geocoded.map do |flat| {
-      lat: flat.latitude,
-      lng: flat.longitude
-    }
+    @markers = @flats.geocoded.map do |flat|
+        {
+            lat: flat.latitude,
+            lng: flat.longitude,
+            info_window: render_to_string(partial: "info_window", locals: {flat: flat})
+        }
     end
   end
 
