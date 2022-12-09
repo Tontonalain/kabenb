@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_flat, only: [:new, :create]
-
+  before_action :set_booking
   def show
+    @booking = Booking.where(user: current_user)
   end
 
   # initialiser le formulaire pour créer un booking par l'appel de l'action new dans le contrôleur qui créé un nouvel
@@ -13,13 +14,12 @@ class BookingsController < ApplicationController
   # création d'un booking prend l'enregistrement créé par l'action new et le transmet à l'action create du contrôleur,
   # qui le sauvegarde dans la base de données
   def create
-    @flat = Flat.find(params[:flat_id])
     # on initialise un nouveau booking avec les paramètres du formulaire
     @booking = Booking.new(booking_params)
     @booking.flat = @flat
     @booking.user = current_user # on associe le booking à l'utilisateur courant grace à devise
-    if @booking.save
-      redirect_to booking_path(@booking)
+    if @booking.save!
+      redirect_to root_path
     else
       render :new
     end

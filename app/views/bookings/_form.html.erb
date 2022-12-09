@@ -1,1 +1,6 @@
-<%= simple_form_for [@flat, booking] %>
+<div class="container">
+  <%= simple_form_for [@flat, booking] %>
+  <%= f.input :start_time %>
+  <%= f.input :end_time %>
+  <%= f.submit %>
+</div>

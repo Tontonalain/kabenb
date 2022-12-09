@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <% number = 0 %>
+    <% @bookings.each do |booking| %>
+      <p>Votre numéro de réservation : <%= number += 1 %></p>
+      <%= booking.start_time %>
+      <%= booking.end_time %>
+      <a href="bookings/<%= booking.id%>"> Voir la réservation</a>
+    <% end %>
+</div>

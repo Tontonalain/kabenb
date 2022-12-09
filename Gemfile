@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Use geocoder
+gem 'geocoder'
+
 # Use devise for authentication
 gem "devise"
 
