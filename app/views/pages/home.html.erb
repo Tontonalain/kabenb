@@ -2,16 +2,15 @@
 );">
   <div class="container">
     <h1>KaBenB <strong>le logement</strong> entre <strong> nous</strong> !</h1>
-    <p>Location de logements de particulier à particulier.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <p>Location de logements de particulier à particulier</p>
+    <a class="btn btn-flat" href="#">Chercher</a>
   </div>
 </div>
+<span id="bt-all">
+  <%= link_to "Voir tous les appartements", flats_path, class: "btn btn-flat" %>
+</span>
 
 <div class="container d-flex">
-  <div id="">
-    <%= link_to "Voir tous les appartements", flats_path, class: "btn btn-flat" %>
-  </div>
-
   <div>
     <%= image_tag("femme_lit.png", width: 500) %>
 
@@ -26,5 +25,13 @@
 
   <div>
     <%= image_tag("femme_allongee.png", width: 500) %>
+
+    <p id="lorem">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+      essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+      passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
   </div>
 </div>

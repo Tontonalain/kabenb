@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
 #lorem {
-  width: 600px;
+  width: 400px;
+  margin: 50px 50px;
+}
+
+#bt-all {
+  display: flex;
+  justify-content: center;
+  margin: 50px 50px;
+}
+
+.container {
+  flex-direction: inline;
+  align-items: center;
 }
